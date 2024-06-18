@@ -1,0 +1,32 @@
+cc_bianry{
+	name:"android.hardware.FanController-service",
+	vendor:true,
+	realtive_install_path: "hw",
+	init_rc:["android.hardware.fancontroller-service.rc"],
+	vintf_fragment:["android.hardware.fancontroller-service.xml"],
+
+	srcs:[
+		"FanSpeedControl.cpp",
+		"fanspeedcontrolservice.cpp",
+	],
+
+	cflags:[
+	"-wall",
+	"-werror",
+	],
+
+    shared_libs:[
+	 "libbase",
+        "liblog",
+        "libhardware",
+        "libbinder_ndk",
+        "libbinder",
+        "libutils",
+         "android.hardware.FanController-V1-ndk",
+
+	],
+
+
+
+
+}

@@ -1,0 +1,5 @@
+service android.hardware.fancontroller-service /vendor/bin/hw/android.hardware.fancontroller-service
+        interface aidl android.hardware.fancontroller.IFanSpeedControlService/default
+        class hal
+        user system
+        group system

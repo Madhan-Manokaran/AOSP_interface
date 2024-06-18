@@ -1,0 +1,52 @@
+// IFanSpeedControlService.hal
+
+package android.hardware.fancontroller@1.0;
+
+
+/**
+ * HAL interface for Fan Speed Control Service
+ */
+interface IFanSpeedControlService {
+
+    /**
+     * Method to increase fan speed
+     *
+     * @return true if successful, false otherwise
+     */
+    increaseFanSpeed() generates (bool success);
+
+    /**
+     * Method to decrease fan speed
+     *
+     * @return true if successful, false otherwise
+     */
+    decreaseFanSpeed() generates (bool success);
+
+    /**
+     * Method to turn the fan on
+     *
+     * @return true if successful, false otherwise
+     */
+    turnFanOn() generates (bool success);
+
+    /**
+     * Method to turn the fan off
+     *
+     * @return true if successful, false otherwise
+     */
+    turnFanOff() generates (bool success);
+
+    /**
+     * Method to get the current fan speed
+     *
+     * @return the current fan speed
+     */
+    getFanSpeed() generates (int32_t speed);
+
+    /**
+     * Method to get the current fan on/off status
+     *
+     * @return true if the fan is on, false otherwise
+     */
+    isFanOn() generates (bool status);
+};

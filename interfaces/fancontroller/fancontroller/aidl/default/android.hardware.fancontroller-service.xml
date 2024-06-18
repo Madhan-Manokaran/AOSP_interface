@@ -1,0 +1,7 @@
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.fancontroller</name>
+        <version>1</version>
+        <fqname>IFanSpeedControlService/default</fqname>
+    </hal>
+</manifest>
